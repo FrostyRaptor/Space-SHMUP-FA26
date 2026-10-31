@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7867569953668207355}
   - component: {fileID: 7867569953668207353}
   - component: {fileID: 7867569953668207352}
-  - component: {fileID: -4521808247631579604}
+  - component: {fileID: 2821378174066250321}
   - component: {fileID: 1507916612442033444}
   m_Layer: 9
   m_Name: Enemy_0
@@ -66,7 +66,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &-4521808247631579604
+--- !u!114 &2821378174066250321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,13 +75,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7867569953668207354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3c9caea87bf38a478c15f61ef4fcc7f, type: 3}
+  m_Script: {fileID: 11500000, guid: e0b15bc316a560c419dfd66e4eeedab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  fireRate: 0.3
-  health: 10
-  score: 100
 --- !u!114 &1507916612442033444
 MonoBehaviour:
   m_ObjectHideFlags: 0
