@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
 
 [RequireComponent(typeof(BoundsCheck))]
 public class Enemy : MonoBehaviour

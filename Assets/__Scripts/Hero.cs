@@ -1,8 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Callbacks;
-using UnityEditor.iOS.Xcode;
 using UnityEngine;
 
 public class Hero : MonoBehaviour
