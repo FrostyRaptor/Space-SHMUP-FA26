@@ -226,9 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5087a6568b936634c8c54618c17e8200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundsType: 0
-  radius: 1
-  keepOnScreen: 1
+  boundsType: 1
+  radius: 8
+  keepOnScreen: 0
   screenLocs: 0
   camWidth: 0
   camHeight: 0
@@ -622,9 +622,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5087a6568b936634c8c54618c17e8200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundsType: 0
-  radius: 1
-  keepOnScreen: 1
+  boundsType: 1
+  radius: 8
+  keepOnScreen: 0
   screenLocs: 0
   camWidth: 0
   camHeight: 0
@@ -1140,9 +1140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5087a6568b936634c8c54618c17e8200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundsType: 0
-  radius: 1
-  keepOnScreen: 1
+  boundsType: 1
+  radius: 8
+  keepOnScreen: 0
   screenLocs: 0
   camWidth: 0
   camHeight: 0

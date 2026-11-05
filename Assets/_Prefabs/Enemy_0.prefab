@@ -83,7 +83,7 @@ MonoBehaviour:
   fireRate: 0.3
   health: 10
   score: 100
-  powerUpDropChance: 1
+  powerUpDropChance: 0.25
 --- !u!114 &1507916612442033444
 MonoBehaviour:
   m_ObjectHideFlags: 0
