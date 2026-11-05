@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6217192625371338083}
   - component: {fileID: 6217192625371338092}
   - component: {fileID: -1707321171045915600}
-  - component: {fileID: -2304692409003739387}
-  - component: {fileID: -2815082106598174010}
-  - component: {fileID: -2742518322907168936}
+  - component: {fileID: -7717380813947588628}
+  - component: {fileID: -7791996435169702246}
+  - component: {fileID: 2731884415648679458}
   m_Layer: 9
   m_Name: Enemy_3
   m_TagString: Untagged
@@ -66,28 +66,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &-2304692409003739387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6217192625371338093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe7cb3f41bfdf964389a898aae5abff3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  fireRate: 0.3
-  health: 10
-  score: 100
-  lifeTime: 5
-  midpointYRange: {x: 1.5, y: 3}
-  drawDebugInfo: 0
-  points: []
-  birthTime: 0
---- !u!114 &-2815082106598174010
+--- !u!114 &-7717380813947588628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +84,7 @@ MonoBehaviour:
   screenLocs: 0
   camWidth: 0
   camHeight: 0
---- !u!114 &-2742518322907168936
+--- !u!114 &-7791996435169702246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,11 +93,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 6217192625371338093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a60e705d904674e982a81ee5479339, type: 3}
+  m_Script: {fileID: 11500000, guid: fe7cb3f41bfdf964389a898aae5abff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+  powerUpDropChance: 1
+  lifeTime: 5
+  midpointYRange: {x: 1.5, y: 3}
+  drawDebugInfo: 0
+  points: []
+  birthTime: 0
+--- !u!114 &2731884415648679458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6217192625371338093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3768fb987db29e4988a59fae0a96179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   showingColor: 0
   blinkCompleteTime: 0
+  ignoreOnCollisionEnter: 0
 --- !u!1001 &6217192625199160741
 PrefabInstance:
   m_ObjectHideFlags: 0

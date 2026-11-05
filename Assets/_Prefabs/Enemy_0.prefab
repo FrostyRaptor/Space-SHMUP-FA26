@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7867569953668207352}
   - component: {fileID: 2821378174066250321}
   - component: {fileID: 1507916612442033444}
-  - component: {fileID: 982828902333343261}
+  - component: {fileID: -487231588677114904}
   m_Layer: 9
   m_Name: Enemy_0
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7867569953668207354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -83,6 +83,7 @@ MonoBehaviour:
   fireRate: 0.3
   health: 10
   score: 100
+  powerUpDropChance: 1
 --- !u!114 &1507916612442033444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +102,7 @@ MonoBehaviour:
   screenLocs: 0
   camWidth: 0
   camHeight: 0
---- !u!114 &982828902333343261
+--- !u!114 &-487231588677114904
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,11 +111,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7867569953668207354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a60e705d904674e982a81ee5479339, type: 3}
+  m_Script: {fileID: 11500000, guid: a3768fb987db29e4988a59fae0a96179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   showingColor: 0
   blinkCompleteTime: 0
+  ignoreOnCollisionEnter: 0
 --- !u!1001 &7867569954146167134
 PrefabInstance:
   m_ObjectHideFlags: 0
