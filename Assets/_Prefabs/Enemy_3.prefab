@@ -101,6 +101,7 @@ MonoBehaviour:
   health: 10
   score: 100
   powerUpDropChance: 0.75
+  pointsPossible: 25
   lifeTime: 5
   midpointYRange: {x: 1.5, y: 3}
   drawDebugInfo: 0

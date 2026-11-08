@@ -21,6 +21,7 @@ public class Hero : MonoBehaviour
   private GameObject lastTriggerGO = null;
   public delegate void WeaponFireDelegate();
   public event WeaponFireDelegate fireEvent;
+  public bool isDead = false;
 
   void Awake()
   {
@@ -39,6 +40,8 @@ public class Hero : MonoBehaviour
 
   void Update()
   {
+    if (isDead) return;
+    
     float hAxis = Input.GetAxis("Horizontal");
     float vAxis = Input.GetAxis("Vertical");
 
@@ -112,9 +115,12 @@ public class Hero : MonoBehaviour
     get { return (_shieldLevel); }
     private set
     {
+      if (isDead) return;
+
       _shieldLevel = Mathf.Min(value, 4);
       if (value < 0)
       {
+        isDead = true;
         Destroy(this.gameObject);
         Main.HERO_DIED();
       }

@@ -7,6 +7,12 @@ public class Main : MonoBehaviour
 {
   static private Main S;
   static private Dictionary<eWeaponType, WeaponDefinition> WEAP_DICT;
+  static private int remainingLives = -1;
+
+  private BoundsCheck bndCheck;
+  private LifeCounter lifeCounter;
+  private ScoreCounter scoreCounter;
+  private GameObject scoreCounterGO;
 
   [Header("Inscribed")]
   public bool spawnEnemies = true;
@@ -21,13 +27,37 @@ public class Main : MonoBehaviour
     eWeaponType.blaster, eWeaponType.blaster, eWeaponType.spread, eWeaponType.shield
   };
 
-  private BoundsCheck bndCheck;
+  [Header("GameOver Screen")]
+  public GameObject gameOverScreen;
 
   void Awake()
   {
     S = this;
 
     bndCheck = GetComponent<BoundsCheck>();
+
+    GameObject lifeCounterGO = GameObject.Find("UIImage_LifeParent");
+    lifeCounter = lifeCounterGO.GetComponent<LifeCounter>();
+
+    scoreCounterGO = GameObject.Find("UIText_Score");
+    scoreCounter = scoreCounterGO.GetComponent<ScoreCounter>();
+
+    if (scoreCounter == null)
+    {
+      Debug.Log("scoreCounter wasn't found.");
+    }
+
+    if (remainingLives < 0)
+    {
+      remainingLives = lifeCounter.maxLives;
+    }
+
+    lifeCounter.StartLives(remainingLives);
+
+    if (gameOverScreen != null)
+    {
+      gameOverScreen.SetActive(false);
+    }
 
     Invoke(nameof(SpawnEnemy), 1f / enemySpawnPerSecond);
 
@@ -77,7 +107,43 @@ public class Main : MonoBehaviour
 
   static public void HERO_DIED()
   {
-    S.DelayedRestart();
+    if (S == null) return;
+
+    remainingLives = S.lifeCounter.LoseLife();
+
+    if (remainingLives > 0)
+    {
+      S.DelayedRestart();
+    }
+    else
+    {
+      S.ShowGameOver();
+    }
+  }
+
+  private void ShowGameOver()
+  {
+    spawnEnemies = false;
+    CancelInvoke(nameof(SpawnEnemy));
+
+    if (gameOverScreen != null)
+    {
+      gameOverScreen.SetActive(true);
+      scoreCounter.DisplayBestScore();
+
+      scoreCounterGO.SetActive(false);
+    }
+    else
+    {
+      Debug.Log("GameOver Screen has not been assigned");
+    }
+  }
+
+  public void StartNewGame()
+  {
+    remainingLives = -1;
+    scoreCounter.ResetBestScoreValue();
+    SceneManager.LoadScene("__Scene_0");
   }
 
   /// <summary>

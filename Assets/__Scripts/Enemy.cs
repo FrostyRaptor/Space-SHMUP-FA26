@@ -11,13 +11,18 @@ public class Enemy : MonoBehaviour
   public float health = 10;
   public int score = 100;
   public float powerUpDropChance = 1f;
+  public int pointsPossible = 1;
 
   protected bool calledShipDestroyed = false;
   protected BoundsCheck bndCheck;
+  protected ScoreCounter scoreCounter;
 
   void Awake()
   {
     bndCheck = GetComponent<BoundsCheck>();
+
+    GameObject scoreGO = GameObject.Find("UIText_Score");
+    scoreCounter = scoreGO.GetComponent<ScoreCounter>();
   }
 
   public Vector3 pos
@@ -64,6 +69,8 @@ public class Enemy : MonoBehaviour
           if (!calledShipDestroyed)
           {
             calledShipDestroyed = true;
+            scoreCounter.score += pointsPossible;
+            scoreCounter.UpdateScore();
             Main.SHIP_DESTROYED(this);
           }
           Destroy(this.gameObject);

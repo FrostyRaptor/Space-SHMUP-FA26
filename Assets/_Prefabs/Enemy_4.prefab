@@ -1277,4 +1277,5 @@ MonoBehaviour:
   health: 0
   score: 100
   powerUpDropChance: 1
+  pointsPossible: 50
   duration: 4

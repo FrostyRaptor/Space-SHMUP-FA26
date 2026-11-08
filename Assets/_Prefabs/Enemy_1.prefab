@@ -87,6 +87,7 @@ MonoBehaviour:
   health: 10
   score: 100
   powerUpDropChance: 0.5
+  pointsPossible: 10
   waveFrequency: 2
   waveWidth: 4
   waveRotY: 45

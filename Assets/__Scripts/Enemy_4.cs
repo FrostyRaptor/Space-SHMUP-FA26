@@ -99,6 +99,9 @@ public class Enemy_4 : Enemy
 
         if (!calledShipDestroyed)
         {
+          scoreCounter.score += pointsPossible;
+          scoreCounter.UpdateScore();
+
           Main.SHIP_DESTROYED(this);
           calledShipDestroyed = true;
         }

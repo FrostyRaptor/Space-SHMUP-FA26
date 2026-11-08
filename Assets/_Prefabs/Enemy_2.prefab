@@ -102,6 +102,7 @@ MonoBehaviour:
   health: 10
   score: 100
   powerUpDropChance: 0.75
+  pointsPossible: 15
   lifeTime: 10
   sinEccentricity: 0.6
   rotCurve:
