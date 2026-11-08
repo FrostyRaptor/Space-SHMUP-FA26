@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Hero : MonoBehaviour
@@ -41,7 +39,7 @@ public class Hero : MonoBehaviour
   void Update()
   {
     if (isDead) return;
-    
+
     float hAxis = Input.GetAxis("Horizontal");
     float vAxis = Input.GetAxis("Vertical");
 
